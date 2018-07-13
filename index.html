@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dog Lister</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="dog-list">
+    <ol>
+      <list
+        v-for="(dog, i) in dogs"
+        v-bind:item="dog"
+        v-bind:key="i">
+    </list>
+    </ol>
+    <input type="text" v-model=" dogName " @keyup.enter=" addDog ">
+    <button v-on:click=" addDog ">Add a dog!</button>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
+
